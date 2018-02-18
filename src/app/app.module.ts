@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DynamicFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
