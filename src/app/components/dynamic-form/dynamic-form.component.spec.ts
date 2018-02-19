@@ -1,16 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DynamicFormComponent } from './dynamic-form.component';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
-describe('DynamicFormComponent', () => {
+fdescribe('DynamicFormComponent', () => {
   let component: DynamicFormComponent;
   let fixture: ComponentFixture<DynamicFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DynamicFormComponent ]
+      declarations: [DynamicFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -22,4 +23,10 @@ describe('DynamicFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a `FormGroup` comprised of `FormControl`s', () => {
+    component.ngOnInit();
+    expect(component.formGroup instanceof FormGroup).toBe(true);
+  });
+
 });

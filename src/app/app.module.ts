@@ -5,12 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
